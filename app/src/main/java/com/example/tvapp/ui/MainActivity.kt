@@ -64,9 +64,9 @@ class MainActivity : AppCompatActivity() {
             val appName = info.loadLabel(packageManager).toString()
             Log.d("APP_DEBUG", "Installed: $appName - $packageName")
 
-            //if (isAppApproved(packageName)) {
+            if (isAppApproved(packageName)) {
                 appList.add(AppInfo(appName, packageName))
-            //}
+            }
 
         }
         return appList
